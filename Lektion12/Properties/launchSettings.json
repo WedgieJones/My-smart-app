@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Lektion12": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7179",
+      "launchBrowser": false
+    }
+  }
+}

@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="SmartApp.MVVM.Views.BedRoomView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SmartApp.MVVM.Views"
+             xmlns:components="clr-namespace:SmartApp.Components"
+
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="1080">
+    <Border x:Name="bedRoom" Style="{StaticResource pageBorder}">
+        <Border CornerRadius="10">
+            <Border.Background>
+                <ImageBrush Stretch="Fill" ImageSource="/Assets/Images/Bedroom.jpg"/>
+            </Border.Background>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="1" Margin="50 10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" VerticalAlignment="Center" >
+                        <TextBlock Foreground="white" FontSize="36" Text="{Binding Title}"></TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Foreground="Gray" FontSize="22" >
+                                <Run Text="{Binding Temperature}" FontSize="32"/>
+                                <Run Text="{Binding TemperatureScale}"/>
+                            </TextBlock>
+                            <TextBlock Margin="40 0 0 0" Foreground="Gray" FontSize="22" >
+                                <Run Text="{Binding Humidity}" FontSize="32"/>
+                                <Run Text="{Binding HumidityScale}"/>
+                            </TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                    <Grid Grid.Column="1" Margin="40 0 0 0" HorizontalAlignment="Right" VerticalAlignment="Center" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Border>
+
+    </Border>
+
+</UserControl>
