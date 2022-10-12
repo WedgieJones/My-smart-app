@@ -30,7 +30,7 @@ namespace IOT_device
 	public partial class MainWindow : Window
 	{
 		private readonly string _connectURL = "http://localhost:7240/api/devices/connect";
-		private readonly string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"G:\\REPOS\\SystemUtveckling Kurs\\Lektion7-master\\Lektion7-master\\IOT_device\\Data\\IOT_db.mdf\";Integrated Security=True;Connect Timeout=30";
+		private readonly string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Fredrik\\OneDrive\\Dokumenter\\laptopDb.mdf;Integrated Security=True;Connect Timeout=30";
 		private DeviceClient _deviceClient;
 		private string _deviceId = "";
 		private DeviceInfo _deviceInfo;

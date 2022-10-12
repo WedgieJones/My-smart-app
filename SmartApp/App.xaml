@@ -13,6 +13,7 @@
                  <ResourceDictionary Source="Resources/Menu.xaml" />
                  <ResourceDictionary Source="Resources/Borders.xaml" />
                  <ResourceDictionary Source="Resources/Buttons.xaml" />
+                 <ResourceDictionary Source="Resources/Temperature.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModels:KitchenViewModel}">

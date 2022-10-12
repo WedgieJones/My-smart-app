@@ -28,10 +28,7 @@ namespace SmartApp.MVVM.ViewModels
 		}
 		
 		public string Title { get; set; } = "Kitchen and Dining";
-		public string Temperature { get; set; } = "23";
-		public string TemperatureScale { get; set; } = "°C";
-		public string Humidity { get; set; } = "33";
-		public string HumidityScale { get; set; } = "%";
+	
 		public IEnumerable<DeviceItem> DeviceItems => _deviceItems;
 
 		private void SetInterval(TimeSpan interval)
@@ -122,67 +119,6 @@ namespace SmartApp.MVVM.ViewModels
 
 
 
-		//private async Task PopulateDeviceItemsAsync()
-		//{
-		//	//var result = registryManager.CreateQuery("select * from devices where location = 'kitchen'");
-		//	var result = registryManager.CreateQuery("select * from devices where properties.reported.location= 'kitchen");
-		//	if (result.HasMoreResults)
-		//	{
-
-		//		foreach (var twin in await result.GetNextAsTwinAsync())
-		//		{
-		//			var device = _deviceItems.FirstOrDefault(devItem => devItem.DeviceId == twin.DeviceId);
-		//			if (device == null)
-		//			{
-		//				device = new DeviceItem
-		//				{
-		//					DeviceId = twin.DeviceId
-		//				};
-		//				try
-		//				{
-		//					device.DeviceName = twin.Properties.Reported["deviceName"];
-		//				}
-		//				catch
-		//				{
-		//					device.DeviceName = device.DeviceId;}
-		//				try { device.DeviceType = twin.Properties.Reported["deviceType"]; }
-		//				catch{}
-
-
-		//				switch (device.DeviceType.ToLower())
-		//				{
-		//					case "fan":
-		//						device.IconActive = "\uf863";
-		//						device.IconInActive = "\uf011";
-		//						device.StateActive = "ON";
-		//						device.StateInActive = "OFF";
-		//						break;
-		//					case "light":
-		//						device.IconActive = "\uf0eb";
-		//						device.IconInActive = "\uf011";
-		//						device.StateActive = "ON";
-		//						device.StateInActive = "OFF";
-		//						break;
-		//					default:
-		//						device.IconActive = "\uf2db";
-		//						device.IconInActive = "\uf011";
-		//						device.StateActive = "ON";
-		//						device.StateInActive = "OFF";
-		//						break;
-		//				}
-		//				_deviceItems.Add(device);
-		//			}
-		//			else
-		//			{
-
-		//			}
-		//		}
-		//	}
-		//	else
-		//	{
-		//		_deviceItems.Clear();
-		//	}
-		//}
 
 
 	}

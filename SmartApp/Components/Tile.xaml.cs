@@ -26,7 +26,7 @@ namespace SmartApp.Components
 	public partial class Tile : UserControl
 	{
 		private readonly RegistryManager _registryManager = RegistryManager.CreateFromConnectionString("HostName=Fredriks-IoTHub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=oTaXRPi71jD6g3fi11SX0GUcrlnMq9IeJWpPaV/utSQ=");
-		private readonly string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"G:\\REPOS\\SystemUtveckling Kurs\\Lektion7-master\\Lektion7-master\\IOT_device\\Data\\IOT_db.mdf\";Integrated Security=True;Connect Timeout=30";
+		private readonly string _connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Fredrik\\OneDrive\\Dokumenter\\laptopDb.mdf;Integrated Security=True;Connect Timeout=30";
 
 		public Tile()
 		{

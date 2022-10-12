@@ -20,15 +20,21 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 
+
                 <Grid Grid.Row="1" Margin="50 10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
+                    
+
                     <StackPanel Grid.Column="0" VerticalAlignment="Center" >
-                        <TextBlock Foreground="white" FontSize="36" Text="{Binding Title}"> </TextBlock>
-                        <StackPanel Orientation="Horizontal">
+                       <TextBlock Foreground="white" FontSize="36" Text="{Binding Title}"> </TextBlock>
+                        <components:Temperature Grid.Row="0" />
+
+
+                        <!--<StackPanel Orientation="Horizontal">
                             <TextBlock Foreground="Gray" FontSize="22" >
                                 <Run Text="{Binding Temperature}" FontSize="32"/>
                                 <Run Text="{Binding TemperatureScale}"/>
@@ -37,10 +43,11 @@
                                 <Run Text="{Binding Humidity}" FontSize="32"/>
                                 <Run Text="{Binding HumidityScale}"/>
                             </TextBlock>
-                        </StackPanel>
+                        </StackPanel>-->
                     </StackPanel>
                     <Grid Grid.Column="1" Margin="40 0 0 0" HorizontalAlignment="Right" VerticalAlignment="Center" MaxWidth="350">
-                       <ItemsControl x:Name="deviceTileListView" ItemsSource="{Binding DeviceItems}">
+                        
+                        <ItemsControl x:Name="deviceTileListView" ItemsSource="{Binding DeviceItems}">
                            <ItemsControl.ItemTemplate>
                                <DataTemplate>
                                     <components:Tile DeviceName="{Binding DeviceName}"
